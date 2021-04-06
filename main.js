@@ -1,11 +1,11 @@
 // Foursquare API Info
-const clientId = '';
-const clientSecret = '';
-const url = '';
+const clientId = 'E1HXNVIENZHEIHXXLLSDL3DHLHCSPSDS5ZNAPNNZJYSSMN3X';
+const clientSecret = 'MU1XFB24LILVWHUHB203HS0SBPQBOZOBVLOITQOYRS12S353';
+const url = 'https://api.foursquare.com/v2/venues/explore?near=';
 
 // OpenWeather Info
-const openWeatherKey = '';
-const weatherUrl = '';
+const openWeatherKey = 'aa2d06b7b28dcf4e1a546a717bbdcc04';
+const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather';
 
 // Page Elements
 const $input = $('#city');
@@ -17,12 +17,13 @@ const $weatherDiv = $("#weather1");
 const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 // Add AJAX functions here:
-const getVenues = () => {
+ const getVenues = async () => {
 
 }
 
 const getForecast = () => {
-
+  const city = $input.val();
+  const urlToFetch = `${url}${city}&limit=10&client_id=${clientId}&client_secret=${clientSecret}&v=20210704`
 }
 
 
