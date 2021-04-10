@@ -69,7 +69,7 @@ const renderVenues = (venues) => {
 const renderForecast = (day) => {
   // Add your code here:
   
-	let weatherContent = '';
+	let weatherContent = createWeatherHTML(day);
   $weatherDiv.append(weatherContent);
 }
 
@@ -79,7 +79,7 @@ const executeSearch = () => {
   $destination.empty();
   $container.css("visibility", "visible");
   getVenues().then(response => renderVenues(response))
-  getForecast()
+  getForecast().then(response => renderForecast(response))
   return false;
 }
 
