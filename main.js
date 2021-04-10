@@ -74,7 +74,7 @@ const renderForecast = (day) => {
 }
 
 const executeSearch = () => {
-  $venueDivs.forEach(venue => venue.empty());
+  $venueDivs.forEach(v => v.empty());
   $weatherDiv.empty();
   $destination.empty();
   $container.css("visibility", "visible");
